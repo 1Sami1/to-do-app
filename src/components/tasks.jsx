@@ -9,21 +9,15 @@ import {
   Text,
   StackDivider,
 } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
-import img from "../images/empty.svg";
+
+
 
 function TaskList({ tasks, updateTask, deleteTask, deleteTaskAll, checkTask }) {
   if (!tasks.length) {
     return (
       <>
         <Box maxW='80%'>
-          <Image
-            mt='20px'
-            w='98%'
-            maxW='350'
-            src={img}
-            alt='Your list is empty'
-          />
+          
         </Box>
       </>
     );

@@ -76,34 +76,41 @@ function App() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <VStack p={4} minH='100vh' pb={28}>
-      <IconButton
-        icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
-        isRound='true'
-        size='md'
-        alignSelf='flex-end'
-        onClick={toggleColorMode}
-         aria-label='toogle-dark-mode'
-      />
+    <header>
+      <Heading as='h1' className="site-h1">Todo List</Heading>
 
-      <Heading
-        p='5'
-        fontWeight='extrabold'
-        size='xl'
-        bgGradient='linear(to-r, red.500, yellow.500)'
-        bgClip='text'
-      >
-        Todo list
-      </Heading>
-      <AddTask addTask={addTask} />
-      <TaskList
-        tasks={tasks}
-        updateTask={updateTask}
-        deleteTask={deleteTask}
-        deleteTaskAll={deleteTaskAll}
-        checkTask={checkTask}
-      />
-    </VStack>
+    </header>
+
+    
+   
+    // <VStack p={4} minH='100vh' pb={28}>
+    //   <IconButton
+    //     icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
+    //     isRound='true'
+    //     size='md'
+    //     alignSelf='flex-end'
+    //     onClick={toggleColorMode}
+    //      aria-label='toogle-dark-mode'
+    //   />
+
+    //   <Heading
+    //     p='5'
+    //     fontWeight='extrabold'
+    //     size='xl'
+    //     bgGradient='linear(to-r, red.500, yellow.500)'
+    //     bgClip='text'
+    //   >
+    //     Todo list
+    //   </Heading>
+    //   <AddTask addTask={addTask} />
+    //   <TaskList
+    //     tasks={tasks}
+    //     updateTask={updateTask}
+    //     deleteTask={deleteTask}
+    //     deleteTaskAll={deleteTaskAll}
+    //     checkTask={checkTask}
+    //   />
+    // </VStack>
   );
 }
 
