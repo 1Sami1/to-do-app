@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 import TaskList from "./components/tasks";
 import AddTask from "./components/AddTask";
+import Date from './components/Date';
 import { FaSun, FaMoon } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
@@ -93,7 +94,7 @@ function App() {
         />
 
         <Stack>
-          <Text>Ocot</Text>
+          <Date />
 
         </Stack>
         
