@@ -79,25 +79,26 @@ function App() {
 
   return (
     <>
-      <header>
+      <header className="site-header">
+
+        <div className="date-tasks">
+          <Date className='header-date' />
+          <p> {tasks.length === 1
+          ? `${tasks.length} Active Task`
+          : `${tasks.length} Active Tasks`}</p>
+        </div>
+
         <h1 className="site-h1">Todo List</h1>
 
         <IconButton
           icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
           isRound='true'
           size='md'
+          className='header-toggle'
           alignSelf='flex-end'
           onClick={toggleColorMode}
           aria-label='toogle-dark-mode'
         />
-
-        <Stack>
-          <Date className='header-date' />
-          <p> {tasks.length === 1
-          ? `${tasks.length} Active Task`
-          : `${tasks.length} Active Tasks`}</p>
-        </Stack>
-        
 
       </header>
 
