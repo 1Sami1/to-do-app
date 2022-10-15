@@ -76,22 +76,24 @@ function App() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <header>
-      <Heading as='h1' className="site-h1">Todo List</Heading>
+    <div >
+      <header>
+        <Heading as='h1' className="site-h1">Todo List</Heading>
+        <IconButton
+        icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
+        isRound='true'
+        size='md'
+        alignSelf='flex-end'
+        onClick={toggleColorMode}
+        aria-label='toogle-dark-mode'
+        />
 
-    </header>
-
-    
+      </header>
+      
+    </div>
    
     // <VStack p={4} minH='100vh' pb={28}>
-    //   <IconButton
-    //     icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
-    //     isRound='true'
-    //     size='md'
-    //     alignSelf='flex-end'
-    //     onClick={toggleColorMode}
-    //      aria-label='toogle-dark-mode'
-    //   />
+      
 
     //   <Heading
     //     p='5'
