@@ -78,30 +78,41 @@ function App() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <div >
+    <>
       <header>
-        <Heading as='h1' className="site-h1">
-          Todo List
-        </Heading>
+        <h1 className="site-h1">Todo List</h1>
 
         <IconButton
-        icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
-        isRound='true'
-        size='md'
-        alignSelf='flex-end'
-        onClick={toggleColorMode}
-        aria-label='toogle-dark-mode'
+          icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
+          isRound='true'
+          size='md'
+          alignSelf='flex-end'
+          onClick={toggleColorMode}
+          aria-label='toogle-dark-mode'
         />
 
         <Stack>
-          <Date />
-
+          <Date className='header-date' />
+          <p> {tasks.length === 1
+          ? `${tasks.length} Active Task`
+          : `${tasks.length} Active Tasks`}</p>
         </Stack>
         
 
       </header>
+
+      <section>
+        <AddTask addTask={addTask} />
+        <TaskList
+          tasks={tasks}
+          updateTask={updateTask}
+          deleteTask={deleteTask}
+          deleteTaskAll={deleteTaskAll}
+          checkTask={checkTask}
+        />
+      </section>
       
-    </div>
+    </>
    
     // <VStack p={4} minH='100vh' pb={28}>
       
@@ -116,13 +127,7 @@ function App() {
     //     Todo list
     //   </Heading>
     //   <AddTask addTask={addTask} />
-    //   <TaskList
-    //     tasks={tasks}
-    //     updateTask={updateTask}
-    //     deleteTask={deleteTask}
-    //     deleteTaskAll={deleteTaskAll}
-    //     checkTask={checkTask}
-    //   />
+    //   
     // </VStack>
   );
 }

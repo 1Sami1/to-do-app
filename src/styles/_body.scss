@@ -1,10 +1,15 @@
-
+    body{
+        font-family: 'Quicksand', sans-serif;
+    }
    .chakra-ui-dark{
     color: $dark-ui-color;
     background-color: $dark-bg;
+    font-family: 'Quicksand', sans-serif;
+   
    }
 
    .chakra-ui-light{
     color: $light-ui-color;
     background-color: $light-bg;
+    font-family: 'Quicksand', sans-serif;
    }
