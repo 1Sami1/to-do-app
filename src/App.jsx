@@ -1,9 +1,10 @@
 import {
   Heading,
   IconButton,
-  VStack,
+  Text,
   useColorMode,
   useToast,
+  Stack,
 } from "@chakra-ui/react";
 import TaskList from "./components/tasks";
 import AddTask from "./components/AddTask";
@@ -78,7 +79,10 @@ function App() {
   return (
     <div >
       <header>
-        <Heading as='h1' className="site-h1">Todo List</Heading>
+        <Heading as='h1' className="site-h1">
+          Todo List
+        </Heading>
+
         <IconButton
         icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
         isRound='true'
@@ -87,6 +91,12 @@ function App() {
         onClick={toggleColorMode}
         aria-label='toogle-dark-mode'
         />
+
+        <Stack>
+          <Text>Ocot</Text>
+
+        </Stack>
+        
 
       </header>
       
