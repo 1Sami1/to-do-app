@@ -24,11 +24,12 @@ import {
   
     return (
       <>
-        <IconButton icon={<FiEdit />} isRound='true' onClick={onOpen} />
+        <IconButton icon={<FiEdit />} isRound='true' onClick={onOpen} bg='gray.500' />
         <Modal
           isCentered
           initialFocusRef={initialRef}
           isOpen={isOpen}
+          bg='#172A3A'
           onClose={onClose}
         >
           <ModalOverlay />

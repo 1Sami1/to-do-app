@@ -5,13 +5,25 @@
     color: $dark-ui-color;
     background-color: $dark-bg;
     font-family: 'Quicksand', sans-serif;
+    .main-sec{
+        .main-stack{
+            border-color: $dark-ui-color;
+        }
+    }
+   
    
    }
 
    .chakra-ui-light{
     color: $light-ui-color;
+    border-color: $dark-bg;
     background-color: $light-bg;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', sans-serif; 
+    .main-sec{
+        .main-stack{
+            border-color: $dark-bg;
+        }
+    }
    }
 
 

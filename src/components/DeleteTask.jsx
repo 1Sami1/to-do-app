@@ -21,6 +21,7 @@ import {
           // colorScheme='red'
           px='8'
           h='45'
+          bg='#51E5FF'
           color='red.500'
           mt='8'
           className="delete-all-btn"
@@ -29,7 +30,8 @@ import {
           Delete All
         </Button>
   
-        <Modal isCentered isOpen={isOpen} onClose={onClose}>
+        <Modal isCentered isOpen={isOpen} onClose={onClose} bg='
+        #172A3A'>
           <ModalOverlay />
           <ModalContent w='90%'>
             <ModalHeader>Do you really want to delete all tasks?</ModalHeader>
@@ -52,7 +54,7 @@ import {
   
     return (
       <>
-        <IconButton icon={<FiTrash2 />} isRound='true' onClick={onOpen} />
+        <IconButton icon={<FiTrash2 />} isRound='true' onClick={onOpen} bg='gray.500' />
   
         <Modal isCentered isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
