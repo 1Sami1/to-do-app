@@ -1,10 +1,7 @@
 import {
-  Heading,
   IconButton,
-  Text,
   useColorMode,
   useToast,
-  Stack,
 } from "@chakra-ui/react";
 import TaskList from "./components/tasks";
 import AddTask from "./components/AddTask";
@@ -80,15 +77,16 @@ function App() {
   return (
     <>
       <header className="site-header">
-
-        <div className="date-tasks">
-          <Date className='header-date' />
-          <p> {tasks.length === 1
-          ? `${tasks.length} Active Task`
-          : `${tasks.length} Active Tasks`}</p>
+        <div className="date-h1">
+          <div className="date-tasks">
+            <Date className='header-date' />
+            <p> {tasks.length === 1
+                ? `${tasks.length} Active Task`
+                : `${tasks.length} Active Tasks`}</p>
+          </div>
+          <h1 className="site-h1">Todo List</h1>
         </div>
-
-        <h1 className="site-h1">Todo List</h1>
+        
 
         <IconButton
           icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
