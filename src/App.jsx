@@ -123,7 +123,7 @@ function App() {
 
       </header>
 
-      <section>
+      <section className="main-sec">
         <AddTask addTask={addTask} />
         <TaskList
           tasks={tasks}

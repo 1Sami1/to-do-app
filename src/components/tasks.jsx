@@ -28,10 +28,11 @@ function TaskList({ tasks, updateTask, deleteTask, deleteTaskAll, checkTask }) {
         divider={<StackDivider />}
         borderColor='gray.100'
         borderWidth='2px'
+        className="main-stack"
         p='5'
         borderRadius='lg'
         w='100%'
-        maxW={{ base: "90vw", sm: "80vw", lg: "50vw", xl: "30vw" }}
+        maxW={{ base: "90vw", sm: "80vw", lg: "50vw", xl: "55vw" }}
         alignItems='stretch'
       >
         {tasks.map((task) => (
@@ -49,7 +50,7 @@ function TaskList({ tasks, updateTask, deleteTask, deleteTaskAll, checkTask }) {
             <DeleteTask
               task={task}
               deleteTask={deleteTask}
-              deleteTaskAll={deleteTaskAll}
+              deleteTaskAll ={deleteTaskAll}
             />
             <UpdateTask task={task} updateTask={updateTask} />
           </HStack>

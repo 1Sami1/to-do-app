@@ -23,6 +23,7 @@ import {
           h='45'
           color='red.500'
           mt='8'
+          className="delete-all-btn"
           onClick={onOpen}
         >
           Delete All
