@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 function AddTask({ addTask }) {
   const toast = useToast();
   const [content, setContent] = useState("");
-  const [statusInput, setStatusInput] = useState(true);
+  const [ statusInput, setStatusInput] = useState(true);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -40,7 +40,7 @@ function AddTask({ addTask }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="add-task-form" onSubmit={handleSubmit}>
       <HStack mt='4' mb='4'>
         <Input
           h='46'
